@@ -2,6 +2,8 @@
 
 Personal portfolio site built with React, Vite and Tailwind CSS.
 
+**Live:** https://portfolio-chi-liard-ok9jj6r3ve.vercel.app
+
 ## Develop
 
 ```bash
