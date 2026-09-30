@@ -18,7 +18,7 @@ export const nav = [
 ]
 
 export const glance = [
-  { label: 'Currently', value: 'Research Assistant, MindShield' },
+  { label: 'Current position', value: 'Research Assistant, MindShield' },
   { label: 'Education', value: 'BSc, University of Toronto (2026) · Cognitive Science, Computer Science & Math' },
   { label: 'Core stack', value: 'React, Angular, TypeScript, .NET Core, C#, SQL Server, Azure' },
   { label: 'Location', value: 'Toronto, ON' },
