@@ -16,8 +16,8 @@ export default function Hero() {
             I&rsquo;m a research assistant at MindShield, where I study how people recognise and respond to cyber
             threats, and a University of Toronto graduate in Cognitive Science, Computer Science &amp; Math. I&rsquo;m
             passionate about spotting real-world problems and solving them with code, whether that&rsquo;s a
-            full-stack web app, a data workflow that replaces manual work, or a search tool that helps students find
-            the right university program.
+            full-stack web app, a data workflow that replaces manual work, or a tool that addresses a genuine need
+            and has a meaningful, practical impact.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href="#projects">View projects</ButtonLink>
