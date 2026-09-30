@@ -1,43 +1,6 @@
 import { useState } from 'react'
-import { coursework, experience, featured, moreProjects, profile, skills, writing } from '../data'
+import { experience, featured, moreProjects, profile, skills, writing } from '../data'
 import { Arrow, ButtonLink, Reveal, Section, Tag, ext } from './ui'
-
-export function About() {
-  return (
-    <Section id="about" title="About">
-      <div className="grid gap-10 md:grid-cols-[1.4fr_1fr]">
-        <Reveal className="space-y-5 leading-relaxed text-muted">
-          <p>
-            I&rsquo;m a full-stack developer with a background that spans
-            <span className="text-ink"> cognitive science</span>,
-            <span className="text-ink"> computer science</span> and
-            <span className="text-ink"> mathematics</span>. That combination shapes how I work: I try to understand
-            how people will actually use a system, build it so it holds up, and use data to check that it works.
-          </p>
-          <p>
-            Most recently I built and maintained a data-import workflow across Angular, .NET Core and Azure, and
-            worked end to end on a startup&rsquo;s web platform. I care about clear workflows, useful error messages,
-            data that is validated before it causes problems, and interfaces that are easy to use.
-          </p>
-        </Reveal>
-
-        <Reveal delay={100} className="rounded-xl border border-line bg-card p-6">
-          <p className="text-xs font-medium uppercase tracking-wide text-muted">Education</p>
-          <h3 className="mt-2 font-semibold">University of Toronto, St. George</h3>
-          <p className="mt-1 text-sm text-muted">BSc · Cognitive Science, Computer Science &amp; Math · 2026</p>
-          <p className="mt-6 text-xs font-medium uppercase tracking-wide text-muted">Selected coursework</p>
-          <ul className="mt-3 flex flex-wrap gap-2">
-            {coursework.map((c) => (
-              <li key={c}>
-                <Tag>{c}</Tag>
-              </li>
-            ))}
-          </ul>
-        </Reveal>
-      </div>
-    </Section>
-  )
-}
 
 function ExperienceItem({ item, index }) {
   const [open, setOpen] = useState(index === 0)

@@ -9,7 +9,6 @@ export const profile = {
 }
 
 export const nav = [
-  { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
   { id: 'writing', label: 'Writing' },
@@ -187,15 +186,4 @@ export const skills = [
   { group: 'Cloud & Data', items: ['Azure Service Bus', 'SQL Server', 'Power BI', 'Tableau', 'Data pipelines'] },
   { group: 'AI tooling', items: ['Claude', 'ChatGPT', 'GitHub Copilot', 'Cursor', 'Prompt engineering', 'Agentic workflows'] },
   { group: 'Practice', items: ['Git', 'Jira', 'Postman', 'UML', 'Agile', 'Technical writing'] },
-]
-
-export const coursework = [
-  'Psychology of Decision-Making',
-  'Human-Computer Interaction',
-  'Learning & Memory',
-  'Cognitive Neuroscience',
-  'Research Methods & Statistics',
-  'Data Structures',
-  'Software Engineering',
-  'Database Management',
 ]
