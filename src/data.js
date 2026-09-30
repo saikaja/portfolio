@@ -12,6 +12,7 @@ export const nav = [
   { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
+  { id: 'writing', label: 'Writing' },
   { id: 'skills', label: 'Skills' },
   { id: 'leadership', label: 'Leadership' },
   { id: 'contact', label: 'Contact' },
@@ -159,6 +160,24 @@ export const moreProjects = [
     meta: '2020',
     text: 'Salary and employment-type tracking with a Swing GUI over SQL Server.',
     stack: ['Java', 'Swing', 'SQL Server'],
+  },
+]
+
+export const writing = [
+  {
+    title: 'Flow as Insight-Driven Cognition: Implications on Consciousness',
+    kicker: 'Essay · Cognitive science',
+    summary:
+      'Flow is usually described as higher thought switching off so that skills can run on autopilot. This essay argues the opposite: in flow, cognition is reorganized rather than diminished, restructuring itself through insight and real-time feedback. Using flow as a case study, it addresses the function and nature of consciousness, compares higher-order, global workspace, integrated information and memory-based theories, and proposes that consciousness is a self-organizing system that continually restructures what is relevant by integrating prediction and feedback.',
+    topics: ['Consciousness', 'Predictive processing', 'Relevance realization', 'Skilled performance'],
+    pages: 8,
+    links: [
+      { label: 'Read the paper (PDF)', href: '/papers/flow-as-insight-driven-cognition.pdf' },
+      {
+        label: 'View on LinkedIn',
+        href: 'https://www.linkedin.com/in/sai-s-kaja/overlay/1780067505600/single-media-viewer/?profileId=ACoAAELtuwAByxkf9FPfiXXac2D1B-jShdCuL_A',
+      },
+    ],
   },
 ]
 

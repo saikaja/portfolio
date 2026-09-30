@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { coursework, experience, featured, moreProjects, profile, skills } from '../data'
+import { coursework, experience, featured, moreProjects, profile, skills, writing } from '../data'
 import { Arrow, ButtonLink, Reveal, Section, Tag, ext } from './ui'
 
 export function About() {
@@ -176,6 +176,36 @@ export function Projects() {
           ))}
         </ul>
       </Reveal>
+    </Section>
+  )
+}
+
+export function Writing() {
+  return (
+    <Section id="writing" title="Research & writing">
+      <div className="space-y-4">
+        {writing.map((w) => (
+          <Reveal key={w.title} as="article" className="rounded-xl border border-line bg-card p-6 sm:p-8">
+            <p className="text-xs font-medium uppercase tracking-wide text-muted">
+              {w.kicker} · {w.pages} pages
+            </p>
+            <h3 className="mt-2 max-w-3xl text-xl font-semibold leading-snug">{w.title}</h3>
+            <p className="mt-3 max-w-3xl leading-relaxed text-muted">{w.summary}</p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {w.topics.map((t) => (
+                <Tag key={t}>{t}</Tag>
+              ))}
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {w.links.map((l, n) => (
+                <ButtonLink key={l.href} href={l.href} variant={n === 0 ? 'primary' : 'secondary'} {...ext}>
+                  {l.label} <Arrow />
+                </ButtonLink>
+              ))}
+            </div>
+          </Reveal>
+        ))}
+      </div>
     </Section>
   )
 }

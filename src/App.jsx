@@ -1,6 +1,6 @@
 import Nav from './components/Nav'
 import Hero from './components/Hero'
-import { About, Contact, Experience, Leadership, Projects, Skills } from './components/Sections'
+import { About, Contact, Experience, Leadership, Projects, Skills, Writing } from './components/Sections'
 import { profile } from './data'
 
 export default function App() {
@@ -18,6 +18,7 @@ export default function App() {
         <About />
         <Experience />
         <Projects />
+        <Writing />
         <Skills />
         <Leadership />
         <Contact />
