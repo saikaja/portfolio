@@ -33,19 +33,13 @@ export function Reveal({ as: Tag = 'div', className = '', delay = 0, children, .
   )
 }
 
-/** Section wrapper with a golf-scorecard style eyebrow ("Hole 02"). */
-export function Section({ id, hole, title, intro, children }) {
+/** Section wrapper with a heading and optional intro line. */
+export function Section({ id, title, intro, children }) {
   return (
-    <section id={id} className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
-      <Reveal className="mb-12 max-w-2xl">
-        <p className="mb-3 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-fairway">
-          <span className="inline-flex h-6 min-w-6 items-center justify-center rounded-full border border-fairway/40 px-2">
-            {String(hole).padStart(2, '0')}
-          </span>
-          Hole {hole}
-        </p>
-        <h2 className="font-display text-4xl font-medium tracking-tight sm:text-5xl">{title}</h2>
-        {intro && <p className="mt-4 text-lg leading-relaxed text-muted">{intro}</p>}
+    <section id={id} className="mx-auto max-w-5xl px-5 py-16 sm:px-8 sm:py-24">
+      <Reveal className="mb-10 max-w-2xl">
+        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">{title}</h2>
+        {intro && <p className="mt-3 leading-relaxed text-muted">{intro}</p>}
       </Reveal>
       {children}
     </section>
@@ -54,19 +48,18 @@ export function Section({ id, hole, title, intro, children }) {
 
 export function Tag({ children }) {
   return (
-    <span className="rounded-full border border-line bg-paper px-2.5 py-1 font-mono text-[11px] text-muted">
+    <span className="inline-block rounded-md border border-line bg-bg px-2 py-0.5 text-xs text-muted">
       {children}
     </span>
   )
 }
 
 export function ButtonLink({ href, children, variant = 'primary', ...rest }) {
-  const base =
-    'inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200 hover:-translate-y-0.5'
+  const base = 'inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors'
   const styles =
     variant === 'primary'
-      ? 'bg-fairway text-paper shadow-sm hover:shadow-md'
-      : 'border border-line bg-card text-ink hover:border-fairway hover:text-fairway'
+      ? 'bg-ink text-bg hover:opacity-90'
+      : 'border border-line bg-card text-ink hover:border-muted'
   return (
     <a href={href} className={`${base} ${styles}`} {...rest}>
       {children}

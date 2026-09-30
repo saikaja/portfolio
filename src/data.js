@@ -13,14 +13,15 @@ export const nav = [
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
-  { id: 'beyond', label: 'Beyond code' },
+  { id: 'leadership', label: 'Leadership' },
   { id: 'contact', label: 'Contact' },
 ]
 
-export const disciplines = [
-  { label: 'Cognitive Science', note: 'How people perceive, decide and learn' },
-  { label: 'Computer Science', note: 'Systems that are reliable and fast' },
-  { label: 'Mathematics', note: 'Models, graphs and statistics' },
+export const glance = [
+  { label: 'Currently', value: 'Research Assistant, MindShield' },
+  { label: 'Education', value: 'BSc, University of Toronto (2026) · Cognitive Science, Computer Science & Math' },
+  { label: 'Core stack', value: 'React, Angular, TypeScript, .NET Core, C#, SQL Server, Azure' },
+  { label: 'Location', value: 'Toronto, ON' },
 ]
 
 export const experience = [
@@ -78,11 +79,12 @@ export const featured = [
     title: 'Import Wizard',
     kicker: 'Contract work · 2025',
     blurb:
-      'A five-step workflow that turns messy Excel sheets into clean records. Users pick a category and fields, download a matching template, map columns, and hand processing off to a queue — then review results and full import history.',
+      'A five-step workflow for importing operational data from Excel. Users choose a category and fields, download a matching template, map columns and submit the file for queued processing, then review the results and full import history.',
     highlights: [
       'Guided 5-step flow: templates, column mapping, validation',
       'Queued processing on Azure Service Bus with status polling',
       'Filterable, paginated history with Excel export',
+      'Live demo runs on sample data in the browser, with no client data',
     ],
     stack: ['Angular', 'TypeScript', '.NET Core', 'C#', 'SQL Server', 'Azure Service Bus'],
     images: [
@@ -90,6 +92,7 @@ export const featured = [
       { src: '/projects/import-wizard-history.png', alt: 'Import Wizard history table with filters and statuses' },
     ],
     links: [
+      { label: 'Live demo', href: 'https://import-wizard-ui.vercel.app' },
       { label: 'Frontend repo', href: 'https://github.com/saikaja/import-wizard-ui' },
       { label: 'API repo', href: 'https://github.com/saikaja/ImportWizardAPI' },
     ],
@@ -97,13 +100,13 @@ export const featured = [
   {
     id: 'caffeine',
     title: 'The Caffeine Decoy',
-    kicker: 'Cog-sci explainer · 3D',
+    kicker: 'Personal project · 3D web',
     blurb:
-      'A scroll-driven 3D story that follows one cup of coffee all the way to a single adenosine receptor — showing why caffeine doesn’t give you energy, it blocks the signal that you’re tired.',
+      'An interactive, scroll-driven 3D explainer that follows caffeine from a cup of coffee to a single adenosine receptor, showing how it blocks the brain’s fatigue signal.',
     highlights: [
       'Scroll-driven scenes from the cup to a single receptor',
       'Built with Three.js; runs in the browser',
-      'Neuroscience made visual and approachable',
+      'Complex neuroscience presented visually for a general audience',
     ],
     stack: ['Three.js', 'JavaScript', 'WebGL'],
     images: [{ src: '/projects/caffeine-3d.png', alt: 'The Caffeine Decoy landing scene with a 3D caffeine molecule above a coffee cup' }],

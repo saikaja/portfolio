@@ -33,7 +33,7 @@ function ThemeToggle() {
     <button
       onClick={toggle}
       aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
-      className="grid h-9 w-9 place-items-center rounded-full border border-line text-muted transition-colors hover:border-fairway hover:text-fairway"
+      className="grid h-9 w-9 place-items-center rounded-lg border border-line text-muted transition-colors hover:border-muted hover:text-ink"
     >
       {dark ? (
         <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -64,15 +64,11 @@ export default function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled || open ? 'border-b border-line bg-paper/85 backdrop-blur-md' : 'border-b border-transparent'
+        scrolled || open ? 'border-b border-line bg-bg/85 backdrop-blur-md' : 'border-b border-transparent'
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
-        <a href="#top" className="group flex items-center gap-2.5 font-display text-lg font-semibold">
-          <svg className="h-6 w-6" viewBox="0 0 32 32" aria-hidden="true">
-            <line x1="12" y1="6" x2="12" y2="26" className="stroke-ink" strokeWidth="2" strokeLinecap="round" />
-            <path d="M13 6.5 L23 10.5 L13 14.5 Z" className="flag fill-sand" />
-          </svg>
+      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-5 sm:px-8">
+        <a href="#top" className="text-base font-semibold tracking-tight">
           {profile.name}
         </a>
 
@@ -82,8 +78,8 @@ export default function Nav() {
               key={id}
               href={`#${id}`}
               aria-current={active === id ? 'true' : undefined}
-              className={`rounded-full px-3 py-1.5 text-sm transition-colors ${
-                active === id ? 'bg-fairway-soft text-fairway' : 'text-muted hover:text-ink'
+              className={`rounded-md px-3 py-1.5 text-sm transition-colors ${
+                active === id ? 'font-medium text-ink' : 'text-muted hover:text-ink'
               }`}
             >
               {label}
@@ -94,7 +90,7 @@ export default function Nav() {
         <div className="flex items-center gap-2">
           <ThemeToggle />
           <button
-            className="grid h-9 w-9 place-items-center rounded-full border border-line md:hidden"
+            className="grid h-9 w-9 place-items-center rounded-lg border border-line md:hidden"
             onClick={() => setOpen((o) => !o)}
             aria-expanded={open}
             aria-controls="mobile-nav"
@@ -109,15 +105,14 @@ export default function Nav() {
 
       {open && (
         <nav id="mobile-nav" aria-label="Mobile" className="border-t border-line px-5 pb-5 pt-2 md:hidden">
-          {nav.map(({ id, label }, i) => (
+          {nav.map(({ id, label }) => (
             <a
               key={id}
               href={`#${id}`}
               onClick={() => setOpen(false)}
-              className="flex items-center justify-between border-b border-line py-3.5 text-base"
+              className="block border-b border-line py-3.5 text-base last:border-b-0"
             >
               {label}
-              <span className="font-mono text-xs text-muted">{String(i + 1).padStart(2, '0')}</span>
             </a>
           ))}
         </nav>
