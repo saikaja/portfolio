@@ -13,9 +13,10 @@ export default function Hero() {
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">{profile.name}</h1>
           <p className="mt-3 text-xl text-muted sm:text-2xl">{profile.role}</p>
           <p className="mt-6 max-w-xl leading-relaxed text-muted">
-            I build full-stack web applications with React, Angular, .NET and Azure. I hold a University of Toronto
-            degree in Cognitive Science, Computer Science &amp; Math, and I&rsquo;m currently a research assistant at
-            MindShield, where I study how people recognise and respond to cyber threats.
+            I&rsquo;m a research assistant at MindShield, where I study how people recognise and respond to cyber
+            threats, and a University of Toronto graduate in Cognitive Science, Computer Science &amp; Math. I&rsquo;m
+            passionate about spotting real-world problems and solving them with code, whether that&rsquo;s a
+            full-stack web app, a data workflow that replaces manual work, or a tool that makes a hard decision easier.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href="#projects">View projects</ButtonLink>
