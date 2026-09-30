@@ -17,7 +17,7 @@ export default function Hero() {
             threats, and a University of Toronto graduate in Cognitive Science, Computer Science &amp; Math. I&rsquo;m
             passionate about spotting real-world problems and solving them with code, whether that&rsquo;s a
             full-stack web app, a data workflow that replaces manual work, or a tool that addresses a genuine need
-            and has a meaningful, practical impact.
+            and has a meaningful impact.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href="#projects">View projects</ButtonLink>
