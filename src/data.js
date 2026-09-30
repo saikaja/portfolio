@@ -120,13 +120,17 @@ export const featured = [
     title: 'Canadian University Program Finder',
     kicker: 'mycanadianuni.ca',
     blurb:
-      'A React platform for students exploring Canadian university programs, with dynamic filters to narrow down by university and course.',
-    highlights: ['Dynamic, dependent filters', 'Styled-components UI', 'Live on a custom domain'],
-    stack: ['React', 'JavaScript', 'styled-components'],
-    images: [{ src: '/projects/mycanadianuni.png', alt: 'mycanadianuni.ca search form for universities and courses' }],
+      'A search tool for students choosing a university. It covers 3,900+ undergraduate programs at 32 Canadian universities, with filters by university and province and a direct link to each program’s official page.',
+    highlights: [
+      'Instant keyword search with university and province filters',
+      'Shareable searches kept in the URL',
+      'Static Next.js site on a custom domain via GitHub Pages',
+    ],
+    stack: ['Next.js', 'React', 'JavaScript', 'Tailwind CSS'],
+    images: [{ src: '/projects/mycanadianuni.png', alt: 'mycanadianuni.ca showing search results for computer science programs' }],
     links: [
       { label: 'Live site', href: 'https://mycanadianuni.ca' },
-      { label: 'Repo', href: 'https://github.com/saikaja/mycanadianuni' },
+      { label: 'Repo', href: 'https://github.com/saikaja/uniproject' },
     ],
   },
 ]
